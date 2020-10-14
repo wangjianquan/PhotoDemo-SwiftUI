@@ -12,16 +12,20 @@ struct AppTabNavigtionView: View {
     var body: some View {
         TabView(selection: $selection,
                 content:  {
-                    ContentView()
-                        .tabItem {
-                            Label("List", systemImage: "list.dash")
-                                .accessibility(label: Text("List layout"))
-                        }.tag(0)
-                    ImageGridView()
-                        .tabItem {
-                            Label("Grid", systemImage: "rectangle.3.offgrid")
-                                .accessibility(label: Text("Grid layout"))
-                        }.tag(1)
+                    NavigationView {
+                        ContentView()
+                    }
+                    .tabItem {
+                        Label("List", systemImage: "list.dash")
+                            .accessibility(label: Text("List layout"))
+                    }.tag(0)
+                    NavigationView {
+                        ImageGridView()
+                    }
+                    .tabItem {
+                        Label("Grid", systemImage: "rectangle.3.offgrid")
+                            .accessibility(label: Text("Grid layout"))
+                    }.tag(1)
                 })
         
     }

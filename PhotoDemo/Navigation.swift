@@ -13,6 +13,8 @@ struct Navigation: View {
     var body: some View {
         if horizontalSizeClass == .compact {
             AppTabNavigtionView()
+        }else{
+            AppSidebarNavigation()
         }
     }
 }

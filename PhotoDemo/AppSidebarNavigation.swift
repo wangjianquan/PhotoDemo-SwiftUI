@@ -14,8 +14,29 @@ struct AppSidebarNavigation: View {
     }
     
     @State private var selection: Set<NavitationItem> = [.list]
+    var sidebar: some View {
+        List(selection: $selection) {
+            NavigationLink(destination: ContentView()) {
+                Label("List", systemImage: "list.bullet")
+                    .accessibility(label: Text("List layout"))
+                    .tag(NavitationItem.list)
+            }
+            NavigationLink(destination: ImageGridView()) {
+                Label("Grid", systemImage: "rectangle.3.offgrid")
+                    .accessibility(label: Text("Grid layout"))
+                    .tag(NavitationItem.grid)
+            }
+        }
+        .navigationTitle("Content Options")
+        .listStyle(SidebarListStyle())
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            sidebar
+            Text("Select Content Style")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
     }
 }
 
