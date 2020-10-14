@@ -12,9 +12,9 @@ import SDWebImageSwiftUI
 struct ImageGridView: View {
     @ObservedObject var randomImages = UnsplashData()
     let columns = [
-        GridItem(spacing: 15),
-        GridItem(spacing: 15),
-        GridItem(spacing: 15)
+        GridItem(spacing: 15,alignment: .center),
+        GridItem(spacing: 15,alignment: .center),
+        GridItem(spacing: 15,alignment: .center)
     ]
     
     var body: some View {
@@ -29,17 +29,17 @@ struct ImageGridView: View {
                         }
                         .indicator(.activity) // Activity Indicator
                         .transition(.fade(duration: 0.5)) // Fade Transition with duration
-//                        .frame(width: 100, height: 100)
+                        .frame(width: (UIScreen.main.bounds.size.width-15-2*15-15)/3, height: (UIScreen.main.bounds.size.width-15-2*15-15)/3)
                         .aspectRatio(contentMode: .fill)
 
                         .cornerRadius(5)
                         .clipped()
-//                    Text(photo.id).font(.footnote)
+                    Text(photo.id).font(.footnote)
                 }
                 
             }/*@END_MENU_TOKEN@*/)
         })
-        .padding()
+        .padding(15)
     }
 }
 

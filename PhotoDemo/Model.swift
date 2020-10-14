@@ -10,8 +10,7 @@ import Foundation
 struct Photo: Identifiable, Decodable {
     var id: String
     var urls: [String : String]
-//    var alt_description: String
-
+    var alt_description: String
 }
 
 class UnsplashData: ObservableObject {
