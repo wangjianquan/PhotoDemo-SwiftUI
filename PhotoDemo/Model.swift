@@ -10,7 +10,7 @@ import Foundation
 struct Photo: Identifiable, Decodable {
     var id: String
     var urls: [String : String]
-    var alt_description: String
+    var alt_description: String?
 }
 
 class UnsplashData: ObservableObject {
@@ -29,6 +29,7 @@ class UnsplashData: ObservableObject {
                 print("dataTask error",error ?? "nil")
                 return
             }
+            
             do {
                 let json = try JSONDecoder().decode([Photo].self, from: data)
                 print("\(json)")

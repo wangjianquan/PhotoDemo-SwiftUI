@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		124F22CC2536939D007BB76A /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F22CB2536939D007BB76A /* ImageGridView.swift */; };
 		124F22CF2536985B007BB76A /* AppTabNavigtionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F22CE2536985B007BB76A /* AppTabNavigtionView.swift */; };
+		124F22D62536AE89007BB76A /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F22D52536AE89007BB76A /* Navigation.swift */; };
+		124F22DA2536B27F007BB76A /* AppSidebarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F22D92536B27F007BB76A /* AppSidebarNavigation.swift */; };
 		7C2FE7152535E3A60094897C /* PhotoDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FE7142535E3A60094897C /* PhotoDemoApp.swift */; };
 		7C2FE7172535E3A60094897C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FE7162535E3A60094897C /* ContentView.swift */; };
 		7C2FE7192535E3A70094897C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2FE7182535E3A70094897C /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 		124F22CB2536939D007BB76A /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
 		124F22CE2536985B007BB76A /* AppTabNavigtionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabNavigtionView.swift; sourceTree = "<group>"; };
 		124F22D1253699F2007BB76A /* PhotoDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoDemo.entitlements; sourceTree = "<group>"; };
+		124F22D52536AE89007BB76A /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		124F22D92536B27F007BB76A /* AppSidebarNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarNavigation.swift; sourceTree = "<group>"; };
 		7C2FE7112535E3A60094897C /* PhotoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2FE7142535E3A60094897C /* PhotoDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDemoApp.swift; sourceTree = "<group>"; };
 		7C2FE7162535E3A60094897C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,7 +69,9 @@
 				7C2FE7142535E3A60094897C /* PhotoDemoApp.swift */,
 				7C2FE7282535EA930094897C /* Model.swift */,
 				124F22CE2536985B007BB76A /* AppTabNavigtionView.swift */,
+				124F22D52536AE89007BB76A /* Navigation.swift */,
 				7C2FE7162535E3A60094897C /* ContentView.swift */,
+				124F22D92536B27F007BB76A /* AppSidebarNavigation.swift */,
 				124F22CB2536939D007BB76A /* ImageGridView.swift */,
 				7C2FE7182535E3A70094897C /* Assets.xcassets */,
 				7C2FE71D2535E3A70094897C /* Info.plist */,
@@ -160,7 +166,9 @@
 				124F22CF2536985B007BB76A /* AppTabNavigtionView.swift in Sources */,
 				7C2FE7292535EA930094897C /* Model.swift in Sources */,
 				7C2FE7172535E3A60094897C /* ContentView.swift in Sources */,
+				124F22D62536AE89007BB76A /* Navigation.swift in Sources */,
 				124F22CC2536939D007BB76A /* ImageGridView.swift in Sources */,
+				124F22DA2536B27F007BB76A /* AppSidebarNavigation.swift in Sources */,
 				7C2FE7152535E3A60094897C /* PhotoDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +309,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wjq.PhotoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -324,7 +332,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wjq.PhotoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
