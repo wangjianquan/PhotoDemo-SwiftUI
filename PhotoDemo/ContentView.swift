@@ -31,8 +31,9 @@ struct ContentView: View {
                                 
                 }
             })
-        }).navigationTitle("random images")
-        }
+            
+        }).navigationBarTitle("random images")
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
